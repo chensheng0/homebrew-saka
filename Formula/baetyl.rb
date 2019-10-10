@@ -10,9 +10,50 @@ class Baetyl < Formula
   # depends_on "cmake" => :build
 
   def install
+    # # Changes log level to default value
+    # inreplace "etc/baetyl/conf.yml" do |s|
+    #     s.gsub! "level: debug", ""
+    # end
+
     bin.install Dir["bin/*"]
     etc.install Dir["etc/*"]
   end
+
+  def caveats
+    <<~EOS
+
+      To have launchd start baetyl now and restart at login:
+        brew services start baetyl
+      Or, if you don't want/need a background service you can just run:
+        sudo baetyl start
+
+    EOS
+  end
+
+  def plist; <<~EOS
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>#{plist_name}</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>KeepAlive</key>
+        <false/>
+        <key>ProgramArguments</key>
+        <array>
+            <string>#{opt_bin}/baetyl</string>
+            <string>-g</string>
+            <string>daemon off;</string>
+        </array>
+        <key>WorkingDirectory</key>
+        <string>#{HOMEBREW_PREFIX}</string>
+      </dict>
+    </plist>
+  EOS
+  end
+
 
   test do
     # `test do` will create, run in and delete a temporary directory.
