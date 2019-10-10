@@ -10,8 +10,8 @@ class Baetyl < Formula
   # depends_on "cmake" => :build
 
   def install
-    bin.install Dir["bin"]
-    etc.install Dir["etc"]
+    bin.install Dir["bin/*"]
+    etc.install Dir["etc/*"]
   end
 
   test do
