@@ -7,6 +7,7 @@ class Apue < Formula
   url "https://bie-test.gz.bcebos.com/apue-1.0.tar.gz"
   sha256 "7e84d03563f7f0119f2d946cc9f439192e582b65a504c39f4158fea7f38f7cbd"
 
+  # for test chen
   # depends_on "cmake" => :build
 
   def install
