@@ -40,12 +40,11 @@ class Baetyl < Formula
         <key>RunAtLoad</key>
         <true/>
         <key>KeepAlive</key>
-        <false/>
+        <true/>
         <key>ProgramArguments</key>
         <array>
             <string>#{opt_bin}/baetyl</string>
-            <string>-g</string>
-            <string>daemon off;</string>
+            <string>start</string>
         </array>
         <key>WorkingDirectory</key>
         <string>#{HOMEBREW_PREFIX}</string>
