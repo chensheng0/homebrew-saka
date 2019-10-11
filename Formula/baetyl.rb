@@ -57,7 +57,6 @@ class Baetyl < Formula
   EOS
   end
 
-
   test do
     # `test do` will create, run in and delete a temporary directory.
     #
