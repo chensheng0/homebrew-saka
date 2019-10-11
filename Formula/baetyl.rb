@@ -4,7 +4,7 @@
 class Baetyl < Formula
   desc ""
   homepage ""
-  url "https://baetyl-test.gz.bcebos.com/baetyl-0.1.6.tar.gz"
+  url "https://baetyl-test.gz.bcebos.com/baetyl-0.1.7.tar.gz"
   sha256 "29fddb593649d8051d814da0aa7b4a28afb1f49525cc7f3142114b0dbe93f47a"
 
   # depends_on "cmake" => :build
