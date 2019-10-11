@@ -43,11 +43,11 @@ class Baetyl < Formula
         <true/>
         <key>ProgramArguments</key>
         <array>
-            <string>#{opt_bin}/baetyl</string>
+            <string>/usr/local/bin/baetyl</string>
             <string>start</string>
         </array>
         <key>WorkingDirectory</key>
-        <string>#{HOMEBREW_PREFIX}</string>
+        <string>/usr/local</string>
       </dict>
     </plist>
   EOS
