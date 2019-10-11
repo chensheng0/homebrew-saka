@@ -45,6 +45,10 @@ class Baetyl < Formula
         <array>
             <string>/usr/local/bin/baetyl</string>
             <string>start</string>
+            <string>-w</string>
+            <string>/usr/local/</string>
+            <string>-c</string>
+            <string>/usr/local/etc/baetyl/conf.yml</string>
         </array>
         <key>WorkingDirectory</key>
         <string>/usr/local</string>
